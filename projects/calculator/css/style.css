@@ -1,0 +1,163 @@
+body {
+  margin: 0;
+  min-height: 100%;
+  max-width: 100%;
+  background: #eee;
+}
+body * {
+  font-family: Roboto;
+  -webkit-transition: 0.3s;
+          transition: 0.3s;
+}
+
+h1.titel {
+  position: relative;
+  color: #333;
+  text-align: center;
+  font-weight: 300;
+  margin: 0;
+  top: 30px;
+  font-size: 40px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+h1.titel span {
+  font-size: 20px;
+}
+
+.ink {
+  display: block;
+  position: absolute;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 100%;
+  -webkit-transform: scale(0);
+      -ms-transform: scale(0);
+          transform: scale(0);
+}
+
+.ink.animate {
+  -webkit-animation: ripple 0.65s linear;
+          animation: ripple 0.65s linear;
+}
+
+@-webkit-keyframes ripple {
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(2.5);
+            transform: scale(2.5);
+  }
+}
+
+@keyframes ripple {
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(2.5);
+            transform: scale(2.5);
+  }
+}
+main {
+  position: absolute;
+  height: 70vh;
+  width: 70vw;
+  background: #34495e;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+main #total {
+  height: 15vh;
+  width: 100%;
+  background: #2c3e50;
+  display: table;
+}
+main #total h2 {
+  font-size: 40px;
+  color: #fff;
+  display: table-cell;
+  vertical-align: middle;
+  text-align: right;
+  padding-right: 20px;
+}
+main .keys {
+  height: 55vh;
+  width: 100%;
+  background: #fff;
+}
+main .keys .left {
+  float: left;
+  width: 70%;
+  height: 100%;
+  background: #34495e;
+}
+main .keys .left .row {
+  height: 25%;
+  width: 100%;
+}
+main .keys .left .row .button {
+  width: calc(100%/3);
+  height: 100%;
+  float: left;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  overflow: hidden;
+  position: relative;
+}
+main .keys .left .row .button h3 {
+  font-size: 25px;
+  color: #fff;
+  margin: 0;
+  vertical-align: middle;
+  text-align: center;
+  height: 100%;
+  padding-top: 50px;
+}
+main .keys .left .row .button:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+main .keys .left .row:last-child .button {
+  width: 100%;
+}
+main .keys .right {
+  float: right;
+  width: 30%;
+  height: 100%;
+  background: #1abc9c;
+  box-shadow: -5px 0px 20px rgba(0, 0, 0, 0.2);
+}
+main .keys .right .row {
+  height: 25%;
+  width: 100%;
+}
+main .keys .right .row .button {
+  width: 100%;
+  height: 100%;
+  float: left;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  position: relative;
+  overflow: hidden;
+}
+main .keys .right .row .button h3 {
+  font-size: 25px;
+  color: #fff;
+  margin: 0;
+  text-align: center;
+  height: 100%;
+  padding-top: 50px;
+}
+main .keys .right .row .button:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+main .keys .right .two .button {
+  width: 50%;
+}

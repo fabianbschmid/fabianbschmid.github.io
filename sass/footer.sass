@@ -1,0 +1,53 @@
+#footer
+  position: relative
+  clip-path: polygon(0 20%, 100% 0%, 100% 100%, 0% 100%)
+  background: $darkblue
+  padding: 100px 0 20px 0
+  color: transparentize(#fff, 0.3)
+
+  @media( max-width: 500px)
+    clip-path: polygon(0 10%, 100% 0%, 100% 100%, 0% 100%)
+  h4
+    color: #fff
+
+  a
+    color: $lightblue
+    text-decoration: none
+
+    &:hover, &:active, &:focus
+      text-decoration: underline
+
+  .container
+    display: flex
+    flex-direction: row
+
+    @media( max-width: 500px)
+      flex-direction: column
+
+  .left, .right
+    width: 50%
+
+    @media( max-width: 500px)
+      width: 100%
+
+    li a
+      color: transparentize(#fff, 0.3)
+      text-decoration: none
+
+  .copyright
+    width: 60%
+    margin: 40px auto
+
+    h4
+      font-weight: 300
+      font-size: 50px
+      margin: 0
+      color: transparentize(#fff, 0.85)
+
+    @media( max-width: 1000px)
+      width: 80%
+
+    @media( max-width: 500px)
+      width: 90%
+      h4
+        font-size: 35px

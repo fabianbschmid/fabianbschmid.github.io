@@ -1,0 +1,272 @@
+section
+  width: 100%
+  min-height: 50vh
+  position: relative
+  background: #fff
+  clip-path: polygon(0 10%, 100% 0%, 100% 90%, 0% 100%)
+  padding: 100px 0
+
+  @media( max-width: 500px)
+    clip-path: polygon(0 5%, 100% 0%, 100% 95%, 0% 100%)
+
+  h1
+    font-size: 60px
+    margin: 0
+
+  h2
+    font-size: 40px
+    margin-top: 0
+
+  hr
+    width: 200px 
+    margin-left: 0
+    height: 3px
+    border: none
+
+  span.tag
+    background: $green
+    padding: 0 10px
+    border-radius: 5px
+    color: $darkblue
+    margin: 3px
+    display: inline-block
+
+.container
+  width: 60%
+  margin: 0 auto
+
+  @media (max-width: 1000px)
+    width: 80%
+  @media (max-width: 500px)
+    width: 90%
+
+  .text-container
+    max-width: 900px 
+
+#start
+  background: radial-gradient(transparent,transparentize($darkblue, 0.3)), url(data/Background2.jpg)
+  background-position: center 26%
+  background-size: cover
+  color: #fff
+  clip-path: polygon(0 0, 100% 0%, 100% 90%, 0% 100%)
+
+  @media(max-width: 650px)
+    padding-top: 50px
+
+  hr
+    background: #fff
+
+  h2
+    font-weight: 300
+
+  .left img
+    border-radius: 50%
+    height: 150px
+    width: 150px
+    top: 0
+    border: 5px solid white
+    transform: rotateZ(0) translateX(-600px)
+    z-index: 1
+    animation: roll 3s cubic-bezier(.49,.37,.33,1.5) 1s forwards
+
+    @media (min-width: 750px)
+      top: 30px
+
+
+
+
+  .headings
+    display: inline-block
+    margin-left: 20px
+
+  .buttons
+    margin-top: 100px
+    font-weight: 300
+
+    @media(max-width: 500px)
+      margin-top: 50px
+
+  .button-portfolio
+    background: $orange
+    margin-left: 0
+
+    &:hover
+      background: $darkorange
+
+  .button-contact
+    background: transparent
+    border: 2px solid #fff
+    padding: 19px 80px
+    box-shadow: none
+
+    @media(max-width: 750px)
+      margin-left: 0
+
+    @media(max-width: 350px)
+      padding: 19px 0
+
+    &:hover
+      color: #ccc
+      border-color: #ccc
+
+#about-me
+  background: $darkblue
+  color: #fff
+
+  h2
+    font-weight: 600
+
+  p
+    font-size: 20px
+
+#contact
+  background: $orange
+
+  .form_image
+    width: 500px
+    position: absolute
+    right: 0
+    top: 0
+    pointer-events: none
+    user-select: none
+
+  h2
+    color: $darkblue
+
+  label
+    display: block
+    font-size: 20px
+    margin-top: 20px
+    margin-bottom: 5px
+    color: $darkblue
+
+  input[type="text"],input[type="email"], textarea
+    background: $darkblue
+    border: none
+    padding: 20px 40px
+    line-height: 1
+    font-size: 20px
+    color: #fff
+    min-width: 50%
+
+  textarea
+    width: 100%
+    min-height: 200px
+    max-width: 1500px
+
+  input[type="submit"]
+    background: #2ecc71
+    margin-left: 0
+
+  @media( max-width: 500px)
+    input[type="text"],input[type="email"], textarea
+      width: 100%
+
+    .form_image
+      display: none
+
+#portfolio
+  background: transparent
+  clip-path: none
+
+  @media( max-width: 1200px)
+    padding: 20px 0
+
+  .more-projects
+    margin-top: 100px
+    a
+      color: $lightblue
+
+  h2
+    color: $darkblue
+
+  .grid-container
+    width: 100%
+    display: flex
+    flex-wrap: wrap
+    justify-content: flex-start
+    background-color: $darkblue
+    padding-left: 10px
+    padding-bottom: 10px
+
+  .item
+    flex-basis: calc(33.33% - 10px)
+    display: block
+    background-size: cover
+    background-position: top center
+    margin: 10px 10px 0 0
+
+    @media (max-width: 1400px)
+      flex-basis: calc(50% - 10px)
+    @media (max-width: 900px)
+      flex-basis: calc(100% - 10px)
+
+    @media (max-width: 600px)
+      flex-basis: 100%
+
+    .content
+      height: 100%
+      width: 100%
+      color: #fff
+      z-index: 1
+      padding: 10px
+
+      > *
+        opacity: 0
+        transition: opacity .3s ease-in-out 0s
+
+      .year
+        font-weight: 300
+        font-size: 60px
+        margin: 0
+
+      .link
+        color: #44aaff
+
+        display: inline-block
+        font-weight: 300
+        margin: 0
+        font-size: 25px
+        &:hover
+          text-decoration: underline
+
+      .text
+        line-height: 1.25
+
+      .tags span
+        background: #2ecc71
+        border-radius: 5px
+        margin: 3px
+        display: inline-block
+        padding: 5px 15px
+        opacity: 0
+        transition: .1s opacity ease-in-out 0s
+
+    .background
+      width: 100%
+      height: 100%
+      position: absolute
+      top: 0
+      left: 0
+      background-image: linear-gradient(to right, rgba(44, 62, 89, 1) 30%, rgba(44, 62, 80, 0.5))
+      opacity: 0
+      transition: opacity .4s ease-in-out
+
+    &:hover
+      .background
+        opacity: 1
+
+      .content > *, .content .tags span
+        opacity: 1
+
+      @for $i from 1 through 4
+        .content > *:nth-child(#{$i})
+          transition-delay: .2s + .2s * $i
+
+      @for $i from 1 through 6
+        .content .tags span:nth-child(#{$i})
+          transition-delay: .9s + .1s * $i
+
+
+    .button
+      background: #2ecc71

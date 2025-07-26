@@ -1,0 +1,17 @@
+{
+  "name": "Gulp",
+  "version": "1.0.0",
+  "description": "Standard Gulpfile",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "^5.0.0",
+    "gulp-sass": "^4.0.1"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.7.12",
+    "gulp": "^3.9.0"
+  },
+  "author": "Fabian Schmid",
+  "license": "ISC"
+}
